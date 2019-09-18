@@ -10,8 +10,6 @@ output: github_document
 body{ /* Normal  */
   font-family: 함초롬돋움;
   font-size: 18px;
-  }
-
 }
 td {  /* Table  */
   font-size: 10px;
@@ -42,7 +40,6 @@ h4 { /* Header 4 */
     font-family: 함초롬돋움;
   font-weight:bold;
 }
-
 code.r{ /* Code block */
   font-family: 함초롬돋움;
   font-size: 16px;
