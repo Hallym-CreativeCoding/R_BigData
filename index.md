@@ -1,33 +1,44 @@
-Test
+창의코딩 R과 빅데이터
 ================
 
-## GitHub Documents
+<style type="text/css">
+body{ /* Normal  */
+  font-family: 함초롬돋움;
+  font-size: 20px;
+}
+h1 { /* Header 1 */
+  font-size: 30px;
+  font-weight:bold;
+  color: DarkBlue;
+}
 
-This is an R Markdown format used for publishing markdown documents to
-GitHub. When you click the **Knit** button all R code chunks are run and
-a markdown file (.md) suitable for publishing to GitHub is generated.
+h2 { /* Header 2 */
+  font-size: 22px;
+  font-weight:bold;
+  color: DarkBlue;
+}
+</style>
 
-## Including Code
+## 데이터 탐색
 
-You can include R code in the document as follows:
+  - 외부데이터 불러오기
+  - 데이터 전체적으로
+살펴보기
 
-``` r
-summary(cars)
-```
+## [데이터 조작](https://hallym-creativecoding.github.io/R_BigData/manipulation)
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+  - dplyr 패키지를 이용하여 데이터 조작
+  - 새로운 변수 생성 및 추가
+  - 조건에 맞는 행 추출
+  - 일부 변수만 추출
+  - 정렬 및 요약 통계
+  - 데이터 병합
 
-## Including Plots
+## 데이터 정제
 
-You can also embed plots, for example:
+  - 결측값과 이상값 존재 여부 확인
+  - 결측값과 이상값의 처리
 
-![](index_files/figure-gfm/pressure-1.png)<!-- -->
+## 데이터 시각화
 
-Note that the `echo = FALSE` parameter was added to the code chunk to
-prevent printing of the R code that generated the plot.
+  - ggplot2 패키지를 이용한 그래프 작성

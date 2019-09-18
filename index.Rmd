@@ -1,30 +1,46 @@
 ---
-title: "Test"
+title: "창의코딩 R과 빅데이터"
 output: github_document
 ---
+
+<style type="text/css">
+body{ /* Normal  */
+  font-family: 함초롬돋움;
+  font-size: 20px;
+}
+h1 { /* Header 1 */
+  font-size: 30px;
+  font-weight:bold;
+  color: DarkBlue;
+}
+
+h2 { /* Header 2 */
+  font-size: 22px;
+  font-weight:bold;
+  color: DarkBlue;
+}
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## GitHub Documents
 
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+## 데이터 탐색
+* 외부데이터 불러오기
+* 데이터 전체적으로 살펴보기 
 
-## Including Code
+## [데이터 조작](https://hallym-creativecoding.github.io/R_BigData/manipulation)
+* dplyr 패키지를 이용하여 데이터 조작
+* 새로운 변수 생성 및 추가
+* 조건에 맞는 행 추출 
+* 일부 변수만 추출
+* 정렬 및 요약 통계
+* 데이터 병합   
 
-You can include R code in the document as follows:
+## 데이터 정제
+* 결측값과 이상값 존재 여부 확인
+* 결측값과 이상값의 처리
 
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## 데이터 시각화
+* ggplot2 패키지를 이용한 그래프 작성
