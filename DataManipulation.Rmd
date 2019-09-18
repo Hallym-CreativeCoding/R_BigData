@@ -16,7 +16,7 @@ output:
 <style type="text/css">
 body{ /* Normal  */
   font-family: 함초롬돋움;
-  font-size: 16px;
+  font-size: 18px;
 }
 td {  /* Table  */
   font-size: 10px;
@@ -49,12 +49,13 @@ h4 { /* Header 4 */
 }
 
 code.r{ /* Code block */
-  font-size: 10px;
+  font-size: 16px;
+  font-family: 함초롬돋움;
 }
 pre { /* Code block - determines code spacing between lines */
-  font-family: 함초롬돋움;
-  font-size: 18px;
+  font-size: 16px;
   color: DarkBlue;
+  font-family: 함초롬돋움;
 }
 .ct1 { /* contents */
   font-family: 함초롬돋움;
