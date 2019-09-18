@@ -49,11 +49,11 @@ h4 { /* Header 4 */
 }
 
 code.r{ /* Code block */
-  font-size: 16px;
+  font-size: 14px;
   font-family: 함초롬돋움;
 }
 pre { /* Code block - determines code spacing between lines */
-  font-size: 16px;
+  font-size: 14px;
   color: DarkBlue;
   font-family: 함초롬돋움;
 }
