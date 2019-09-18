@@ -1541,8 +1541,7 @@ h4 { /* Header 4 */
 }
 
 code.r{ /* Code block */
-  font-family: 함초롬돋움;
-  font-size: 16px;
+  font-size: 14px;
 }
 pre { /* Code block - determines code spacing between lines */
   font-family: 함초롬돋움;
@@ -1655,7 +1654,7 @@ mtcars %&gt;%                  # cyl별 갯수 및 mpg 평균
 </div>
 </div>
 <div id="section-1" class="section level1">
-<h1>변수명 변경 및 변수 추가</h1>
+<h1>변수 변경 및 추가</h1>
 <p><strong>외부 데이터 읽어오기</strong><br />
 “exam.cav” 파일을 데이터프레임 df로 불러와 데이터와 구조를 확인한다.</p>
 <pre class="r"><code>str(df)  # 데이터구조 확인</code></pre>
@@ -1668,16 +1667,15 @@ mtcars %&gt;%                  # cyl별 갯수 및 mpg 평균
 ##  $ 영어  : int  98 97 86 98 80 95 90 78 98 98 ...
 ##  $ 컴퓨터: int  50 60 78 58 65 98 85 25 15 45 ...</code></pre>
 <div id="section-2" class="section level2">
-<h2>변수명 및 자료형 변경</h2>
-<p>데이터 분석을 위해 변수명이나 변수의 자료형을 바꾸어야 하는 경우가 있다. * 변수명 변경을 위해서 dplyr 패키지에서 제공하는 <strong>rename()</strong> 함수를 사용한다.<br />
-- 데이터프레임 df의 ‘수학’, ‘영어’, ‘컴퓨터’ 변수명을 math, eng, com으로 변경해 보자.</p>
+<h2>변수 변경</h2>
+<p>데이터 분석을 위해 변수명이나 변수의 자료형을 바꾸어야 하는 경우가 있다. ### 변수 이름 변경<br />
+변수명 변경을 위해서 dplyr 패키지에서 제공하는 <strong>rename()</strong> 함수를 사용한다.<br />
+데이터프레임 df의 ‘수학’, ‘영어’, ‘컴퓨터’ 변수명을 math, eng, com으로 변경해 보자.</p>
 <pre class="r"><code>df &lt;- rename(df, math=&quot;수학&quot;, eng=&quot;영어&quot;, com=&quot;컴퓨터&quot;)</code></pre>
-<ul>
-<li>변수의 자료형을 변경하기 위해서 <strong>as.xxxxx()</strong>함수를 사용한다.</li>
-<li>데이터프레임 df에서 name 변수가 factor(요인)형으로 되어 있다.</li>
-<li><strong>as.character()</strong> 함수를 이용하여 문자형으로 변경한다.</li>
-<li>name 변수에 변경 내용을 다시 저장해 주어야 자료형 변경이 완료된다.</li>
-</ul>
+<div id="section-3" class="section level3">
+<h3>변수 자료형 변경</h3>
+<p>변수의 자료형을 변경하기 위해서 <strong>as.xxxxx()</strong>함수를 사용한다.<br />
+데이터프레임 df에서 name 변수가 factor(요인)형으로 되어 있다. - <strong>as.character()</strong> 함수를 이용하여 문자형으로 변경한다. - name 변수에 변경 내용을 다시 저장해 주어야 자료형 변경이 완료된다.</p>
 <pre class="r"><code>df$name &lt;- as.character(df$name) </code></pre>
 <p>변수 name의 자료형이 문자형으로 변경되었는지 확인한다.</p>
 <pre class="r"><code>str(df)  # 데이터구조 확인</code></pre>
@@ -1700,7 +1698,8 @@ mtcars %&gt;%                  # cyl별 갯수 및 mpg 평균
 ## 6 20190006     A 박미희      M  100  95  98</code></pre>
 <hr />
 </div>
-<div id="section-3" class="section level2">
+</div>
+<div id="section-4" class="section level2">
 <h2>변수 추가하기</h2>
 <p>데이터를 분석을 위해 추가적인 변수가 필요한 경우 데이터프레임을 다시 만들지 않고 기존 데이터프레임에 변수를 추가할 수 있다.<br />
 새로운 변수를 생성하는 세 가지 방법을 소개한다.</p>
@@ -1709,7 +1708,7 @@ mtcars %&gt;%                  # cyl별 갯수 및 mpg 평균
 <li>조건문 함수를 활용하는 방법</li>
 <li><strong>mutate()</strong> 함수 사용하는 방법</li>
 </ul>
-<div id="section-4" class="section level3">
+<div id="section-5" class="section level3">
 <h3>기존 변수 조합</h3>
 <p>기존 변수의 값을 조합하여 새로운 변수를 만들수 있다.</p>
 <p>먼저, 여러 방법을 사용할 것이므로 데이터프레임 df를 df_new로 복사한다.</p>
@@ -1725,7 +1724,7 @@ head(df_new)</code></pre>
 ## 5 20190005     A 손세수      M   25  80  65   170 56.66667
 ## 6 20190006     A 박미희      M  100  95  98   293 97.66667</code></pre>
 </div>
-<div id="section-5" class="section level3">
+<div id="section-6" class="section level3">
 <h3>조건문 함수 활용</h3>
 <p>조건에 따라 특정 값이나 변수를 선택하는 경우 ifelse() 함수를 사용하여 새로운 변수를 생성할 수 있다.</p>
 <ul>
@@ -1779,8 +1778,9 @@ df_new &lt;- df_new %&gt;%
 <hr />
 </div>
 </div>
-<div id="section-6" class="section level2">
-<h2>조건에 맞는 행만 추출</h2>
+</div>
+<div id="section-7" class="section level1">
+<h1>조건에 맞는 행만 추출</h1>
 <p>데이터 분석 시 전체 데이터를 분석하기도 하지만 일부 원하는 데이터만 추출해 분석하기도 한다. dplyr 패키지의 <strong>filter()</strong> 함수를 이용하여 원하는 데이터를 추출할 수 있다.<br />
 실습을 위해 데이터프레임 df를 exam로 복사한다.</p>
 <p>filter() 안에 조건을 입력한다. 조건은 비교연산이나 논리연산으로 연산의 결과값이 TRUE 또는 FALSE이다. 입력된 조건에 부합되는 행만 추출한다.</p>
@@ -1904,8 +1904,8 @@ classA</code></pre>
 <hr />
 </div>
 </div>
-<div id="section-7" class="section level2">
-<h2>일부 변수만 추출</h2>
+<div id="section-8" class="section level1">
+<h1>일부 변수만 추출</h1>
 <p><strong>select()</strong> 안에 변수명을 입력하여 원하는 변수(열)만 추출한다.</p>
 <ul>
 <li>특정 변수를 제외하고 추출할 때 변수명 앞에 -를 기입</li>
@@ -2072,8 +2072,8 @@ classA</code></pre>
 <hr />
 </div>
 </div>
-<div id="section-8" class="section level2">
-<h2>데이터프레임 정렬</h2>
+<div id="section-9" class="section level1">
+<h1>데이터프레임 정렬</h1>
 <p>특정 변수를 기준으로 정렬할 때 <strong>arrage()</strong> 함수을 이용한다.<br />
 여러 개의 기준에 의해 정렬하려면 기준이 되는 변수들을 순서대로 나열한다.<br />
 arrange() 함수는 기본적으로 오름차순으로 정렬된다. 내림차순으로 정렬하려면 <strong>desc()</strong>을 사용한다.</p>
@@ -2154,8 +2154,8 @@ arrange() 함수는 기본적으로 오름차순으로 정렬된다. 내림차�
 <hr />
 </div>
 </div>
-<div id="section-9" class="section level2">
-<h2>유일한 값 추출</h2>
+<div id="section-10" class="section level1">
+<h1>유일한 값 추출</h1>
 <p><strong>distinct()</strong> 함수를 이용하여 중복되지 않는 유일한 값을 추출한다.<br />
 두 개 이상의 변수를 기준으로 중복되지 않는 값을 검색할 수도 있다.</p>
 <div id="exam--class----" class="section level4">
@@ -2177,7 +2177,6 @@ arrange() 함수는 기본적으로 오름차순으로 정렬된다. 내림차�
 ## 5     C      M
 ## 6     C      X
 ## 7     C      F</code></pre>
-</div>
 </div>
 </div>
 
