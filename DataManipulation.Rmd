@@ -195,10 +195,12 @@ mtcars %>%                  # cyl별 갯수 및 mpg 평균
 **외부 데이터 읽어오기**    
 "exam.cav" 파일을 데이터프레임 df로 불러와 데이터와 구조를 확인한다.
 
+
 ```{r}
 df <- read.csv("exam.csv", stringsAsFactors = T)
 df
 ```
+
 
 
 ```{r}
