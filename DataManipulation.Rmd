@@ -1,7 +1,6 @@
 ---
 title: "데이터 조작"
-      
-        
+
 #author: "Lee, Deokyoung"
 #date: '2019 9 18 '
 output:
@@ -539,7 +538,6 @@ exam %>%
             count=n() )               # 학생수 
 
 ```
-
 
 
 # 7 데이터 합치기 
