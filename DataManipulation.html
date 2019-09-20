@@ -1605,7 +1605,8 @@ font-family: 함초롬돋움;
 <div id="dplyr----" class="section level2">
 <h2>1.1 dplyr 패키지 설치 및 로드</h2>
 <p>파이프 연산자 (%&gt;%)를 사용하거나 select(), filter(), mutate() 등의 함수를 사용하려면 먼저 dplyr 패키지를 설치하고 메모리로 로드한다.</p>
-<pre class="r"><code>#install.packages(&quot;dplyr&quot;)   # 한번만 설치
+<pre class="r"><code>install.packages(&quot;dplyr&quot;)   # 한번만 설치
+
 library(dplyr)              # dplyr 패키지 불러오기
 library(ggplot2)            # ggplot2 패키지 불러오기</code></pre>
 <p>실습을 위해 mtcars 데이터셋을 사용한다. 먼저 앞쪽 자료 10개를 확인하고 자료의 구조정보를 확인한다.</p>
@@ -2331,7 +2332,7 @@ x    # 2x3 </code></pre>
 ## 1 2 창의 2 8
 ## 2 3 코딩 3 9</code></pre>
 <div id="section-14" class="section level2">
-<h2>병합 (열 추가)</h2>
+<h2>열 추가(병합)</h2>
 <p><strong>left_join()</strong> 함수는 by 옵션에 지정된 변수를 기준으로 오른쪽 데이터를 왼쪽에 합친다.<br />
 아래 예제는 왼쪽 데이터프레임 x의 변수 a를 기준으로 병합된다. 데이터프레임 x와 y의 a 변수값을 비교할 때 y쪽에서 보면 3행이 일치하지 않는다. 따라서 왼쪽 x는 그대로 남아있고, 오른쪽 y는 3행을 제외한 1,2행만 선택된다.</p>
 <pre class="r"><code>left_join(x, y, by = &quot;a&quot;)     </code></pre>

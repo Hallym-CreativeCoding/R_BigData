@@ -129,7 +129,8 @@ library(ggplot2)
 
 ```{r eval=F}
 
-#install.packages("dplyr")   # 한번만 설치
+install.packages("dplyr")   # 한번만 설치
+
 library(dplyr)              # dplyr 패키지 불러오기
 library(ggplot2)            # ggplot2 패키지 불러오기
 
@@ -559,7 +560,7 @@ z    # 2x4
 ```
 
 
-## 병합 (열 추가)  
+## 열 추가(병합)  
 
 **left_join()** 함수는  by 옵션에 지정된 변수를 기준으로 오른쪽 데이터를 왼쪽에 합친다.       
 아래 예제는 왼쪽 데이터프레임 x의 변수 a를 기준으로 병합된다. 
