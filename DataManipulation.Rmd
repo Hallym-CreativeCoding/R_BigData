@@ -56,6 +56,12 @@ font-family: 함초롬돋움;
   font-size: 20px;
   font-weight:bold;
 }
+h5 { /* 혼자서 해보기 */
+font-family: 함초롬돋움;
+  font-size: 20px;
+  font-weight:bold;
+  color: DarkRed;
+}
 
 code.r{ /* Code block */
 font-family: 함초롬돋움;
@@ -465,6 +471,28 @@ exam %>% distinct(class, gender)
 ```
 
 
+##### [혼자서 해보기 1]
+**mpg 데이터셋을 사용하여 새로운 변수 통합연비(total)와 통합연비평균(avg)를 추가한 후 통합연비평균 기준으로 내림차순 정렬한 결과를 새로운 mpg_new에 저장하세요.**
+
+  + 통합연비(total) : 도시연비(cty)와 고속도로연비(hwy)의 합
+  + 통합연비평균(avg) : 통합연비(total)의 평균
+  
+```{r}
+# library(ggplot2)     # mpg 데이터셋은 ggplot2 패키지에 포함
+str(mpg)
+
+mpg_new <- mpg %>% 
+  mutate(total = cty+hwy, 
+         avg= total/2 ) %>% 
+  arrange(desc(avg))
+
+mpg_new
+```
+
+
+
+
+
 # 7 요약 통계
 **summarise()** 함수를 이용하여 데이터의 요약통계량을 계산한다.       
 아래 코드는 데이터프레임 exam에서 관측값의 갯수, math와 com 변수의 평균을 계산한 후 count, mean_math, mean_com이라는 새 변수에 계산된 값을 할당하여 출력한다.
@@ -569,33 +597,7 @@ bind_rows(x, y, z)
 
 
 
-# 8 문제해결하기
-dplyr 패키지를 이용하여 주어진 문제를 해결해 보자.
-파이프(%>%) 연산자와 mutate(), filter(), select(), arrange(), distinct(), group_by(), summarise(), left_join() 를 조합하여 데이터를 조작한다.
-
-
-#### [문제1]
-**mpg 데이터셋을 사용하여 새로운 변수 통합연비(total)와 통합연비평균(avg)를 추가한 후 통합연비평균 기준으로 내림차순 정렬한 결과를 새로운 mpg_new에 저장하세요.**
-
-  + 통합연비(total) : 도시연비(cty)와 고속도로연비(hwy)의 합
-  + 통합연비평균(avg) : 통합연비(total)의 평균
-  
-```{r}
-# library(ggplot2)     # mpg 데이터셋은 ggplot2 패키지에 포함
-str(mpg)
-
-mpg_new <- mpg %>% 
-  mutate(total = cty+hwy, 
-         avg= total/2 ) %>% 
-  arrange(desc(avg))
-
-mpg_new
-```
-
-
-
-
-#### [문제2]
+##### [혼자서 해보기 2]
 **mpg 데이터셋을 사용하여 제조회사(manufacturer)별로 차종(class)이 suv인 자동차의 통합연비(tot)의 평균을 구한 후 상위 1~5위까지 출력하세요.**
 
 + 문제 해결 단계
