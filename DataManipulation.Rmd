@@ -1,6 +1,5 @@
 ---
-title: "데이터 조작"
-
+title: "데이터 조작하기"
 #author: "Lee, Deokyoung"
 #date: '2019 9 18 '
 output:
@@ -30,6 +29,7 @@ td {  /* Table  */
   font-size: 16px;
 }
 h1.title {
+  font-family: 함초롬돋움;
   font-size: 48px;
   font-weight:bold;
   color: DarkRed;
@@ -99,12 +99,12 @@ library(ggplot2)
  
 학습 내용
 
-1. plyr 패키지
+1. dplyr 패키지
 2. 변수명 변경 및 변수 추가
 3. 조건에 맞는 행만 추출
 4. 일부 변수만 추출
 5. 정렬 및 요약 통계
-6. 데이터 병합 및 행 추가
+6. 데이터 열 및 행 추가
 
                       
       
@@ -138,8 +138,8 @@ library(ggplot2)            # ggplot2 패키지 불러오기
 실습을 위해 mtcars 데이터셋을 사용한다. 먼저 앞쪽 자료 10개를 확인하고 자료의 구조정보를 확인한다. 
 
 ```{r}
-head(mtcars, 10)         # 데이터셋 mtcars 사용
-str(mtcars)    # mtcars 데이터 구조 확인 
+head(mtcars, 10)     # 데이터셋 mtcars 사용
+str(mtcars)          # mtcars 데이터 구조 확인 
 ```
 
     
@@ -205,7 +205,9 @@ str(df)  # 데이터구조 확인
 
 ## 2.1 변수 변경  
 데이터 분석을 위해 변수명이나 변수의 자료형을 바꾸어야 하는 경우가 있다. 
+
 ### (1) 변수 이름 변경   
+
 변수명 변경을 위해서 dplyr 패키지에서 제공하는 **rename()** 함수를 사용한다.       
 데이터프레임 df의 '수학', '영어', '컴퓨터' 변수명을 math, eng, com으로 변경해 보자.  
 
