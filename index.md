@@ -25,7 +25,7 @@ h2 { /* Header 2 */
   - 데이터 전체적으로
 살펴보기
 
-## [데이터 조작](https://hallym-creativecoding.github.io/R_BigData/manipulation)
+## [데이터 조작](https://hallym-creativecoding.github.io/R_BigData/DataManipulation)
 
   - dplyr 패키지를 이용하여 데이터 조작
   - 새로운 변수 생성 및 추가
