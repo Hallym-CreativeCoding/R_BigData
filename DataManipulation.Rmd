@@ -97,9 +97,7 @@ library(dplyr)
 library(ggplot2)
 ```
    
-   
-
-
+ 
 학습 내용
 
 1. plyr 패키지
