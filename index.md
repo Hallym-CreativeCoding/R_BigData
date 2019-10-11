@@ -11,7 +11,6 @@ h1 { /* Header 1 */
   font-weight:bold;
   color: DarkBlue;
 }
-
 h2 { /* Header 2 */
   font-size: 22px;
   font-weight:bold;
