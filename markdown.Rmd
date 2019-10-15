@@ -3,6 +3,7 @@ title: "R 마크다운 문서 만들기"
 output:
   html_document: 
     highlight: textmate
+
   word_document:
     highlight: tango
     reference_docx: korean-template.docx
@@ -51,7 +52,7 @@ h5 { /* 혼자서 해보기 */
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-##  1. R 마크다운
+##  R 마크다운
  데이터분석의 결과를 보고서 형식으로 작성하기 위한 저작도구로서 R코드와 마크다운을 하나의 파일에 결합한 것이다. 텍스트와 R 코드를 같이 놓고 작성할 수 있기 때문에 R 코드와 실행결과뿐 아니라 분석결과를 다른 사람과 쉽게 공유할 수 있고 HTML, PDF, MS워드 등의 다양한 형태의 문서를 만들 수 있다.
  
 R마크다운 문서는 Rmd 파일에 저장되며 R코드와 마크다운을 YAML 헤더, 코드 청크, 마크다운으로 구성된다.   
@@ -214,7 +215,7 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) + geom_point(aes(color=drv, size=dis
 ![tidyverse logo](https://www.tidyverse.org/images/tidyverse-default.png){ width=50% }
 
 
-##  2. Git에 올리기 
+##  Git에 올리기 
 
 #####  Git 계정 설정
 
