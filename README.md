@@ -31,6 +31,9 @@ R에서 사용하는 데이터 구조를 익히고, R 프로그래밍을 통해 
   - ggplot2 패키지를 이용한 그래프 작성
 
 
+## [R마크다운 문서](https://hallym-creativecoding.github.io/R_BigData/markdown)
+
+   - R마크다운 문서를 만들어 Git에 업로드
 
 ## Git & Github 소개
 
