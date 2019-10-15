@@ -478,6 +478,7 @@ ggplot(eco, aes(x = date, y = unemploy)) + geom_line()
 
 ```
 
+
 위의 그래프에서 선의 색과 두께를 변경해 보자.
 
 ```{r}
