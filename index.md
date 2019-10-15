@@ -24,3 +24,7 @@
 ## [데이터 시각화](https://hallym-creativecoding.github.io/R_BigData/ggplot)
 
   - ggplot2 패키지를 이용한 그래프 작성
+
+## [R마크다운 문서](https://hallym-creativecoding.github.io/R_BigData/markdown)
+
+   - R마크다운 문서를 만들어 Git에 업로드
