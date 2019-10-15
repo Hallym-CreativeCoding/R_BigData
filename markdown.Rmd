@@ -226,7 +226,7 @@ Git에 작성한 R마크다운 문서를 업로드하려면 Git에 계정이 있
 
 아래 그림과 같이 **Public**을 선택하고 README 파일이 자동으로 만들어지도록 *항목을 체크*하고 [Create repository] 버튼을 누른다.
 
-
+   
 ![](img/make_repository.png){ width=60% }
 
 Repositoryr가 만들어지면 화면 상단 오른쪽 끝에 있는 Setting 탭을 클릭하여 GitHub Pages 항목을 그림과 같이 **master branch**로 설정하면 해당 위치에 홈페이지 주소창이 생성된다.  
