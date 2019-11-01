@@ -38,9 +38,12 @@ knitr::opts_chunk$set(echo = TRUE)
 * 정렬 및 요약 통계
 * 데이터 병합   
 
-## 데이터 정제
+## [데이터 정제](https://github.com/Hallym-CreativeCoding/R_BigData/blob/master/11-%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%A0%95%EC%A0%9C.pdf)
 * 결측값과 이상값 존재 여부 확인
 * 결측값과 이상값의 처리
 
-## 데이터 시각화
+## [데이터 시각화](https://hallym-creativecoding.github.io/R_BigData/ggplot)
 * ggplot2 패키지를 이용한 그래프 작성
+
+## [R마크다운 문서](https://hallym-creativecoding.github.io/R_BigData/markdown)
+* R마크다운 문서를 만들어 Git에 업로드
