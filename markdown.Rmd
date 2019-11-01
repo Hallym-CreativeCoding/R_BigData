@@ -1,21 +1,23 @@
 ---
 title: "R 마크다운 문서 만들기"
+#author: "Lee, Deokyoung"
+#date: '2019 9 18 '
 output:
   html_document: 
+    fig_height: 6
+    fig_width: 10
     highlight: textmate
-
   word_document:
     highlight: tango
     reference_docx: korean-template.docx
-  pdf_document: 
+  pdf_document:
     latex_engine: xelatex
 mainfont: NanumGothic
 ---
 
 <style type="text/css">
 body{ /* Normal  */
-font-family: 함초롬돋움;
-  font-size: 18px;
+  font-size: 16px;
 }
 .table {
     width: 60%;
@@ -24,7 +26,6 @@ td {  /* Table  */
   font-size: 16px;
 }
 h1.title {
-  font-family: 함초롬돋움;
   font-size: 48px;
   font-weight:bold;
   color: DarkRed;
@@ -40,6 +41,7 @@ h4 { /* Header 4 */
   font-weight:bold;
 }
 h5 { /* 혼자서 해보기 */
+  font-size: 22px;
   font-weight:bold;
   color: DarkRed;
 }
@@ -48,18 +50,23 @@ h5 { /* 혼자서 해보기 */
 </style>
 
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
 ```
 
-##  R 마크다운
+
+##  1. R 마크다운
  데이터분석의 결과를 보고서 형식으로 작성하기 위한 저작도구로서 R코드와 마크다운을 하나의 파일에 결합한 것이다. 텍스트와 R 코드를 같이 놓고 작성할 수 있기 때문에 R 코드와 실행결과뿐 아니라 분석결과를 다른 사람과 쉽게 공유할 수 있고 HTML, PDF, MS워드 등의 다양한 형태의 문서를 만들 수 있다.
  
 R마크다운 문서는 Rmd 파일에 저장되며 R코드와 마크다운을 YAML 헤더, 코드 청크, 마크다운으로 구성된다.   
 작성한 Rmd 파일을 문서로 생성하기 위해서는 짜기(Knit)를 해야 한다. 짜기(Kint)를 통해 Viewer Pane에서 문서 생성 결과를 확인할 수 있다. 단축키(Ctrl + Shift + k)를 사용하면 빠르게 문서를 확인할 수 있다.
 
 ##### YAML 헤더      
-  문서 처음에 ---와 --- 사이에 문서에 대한 사항으로 title, author, output 등의 필드와 값으로 구성된다. 
+  문서 처음에 3개의 대시기호(-)로 둘러싸인 부분이 YAML 헤더이다.     
+  제목, 저자 이름, 날짜 등의 정보 등을 구성되어 있으며, title, author, output 등의 필드와 값으로 작성한다.   
 
  
 ```{r eval=F, message=F}
@@ -73,28 +80,22 @@ output:
 ##### 코드 청크    
   R마크다운 문서에서 R 코드를 실행하기 위해서는 아래와 같이  '''{r}과 ''' 사이에 코드를 입력해야 한다. 이 부분을 청크(chunk)라고 한다
  
-  - 청크 삽입 : Ctrl + Alt + I
+  - 청크 삽입 : Ctrl + Alt + i
   - 청크 단위 실행 : Ctrl + Shift + Enter 
   - 한줄 실행: Ctrl + Enter
   
-
-```{r eval=F, message=F} 
-
-'''{r}
-
-str(iris)
-
-'''
-```
+  
+![](img/chunks.png)
+``
   
 ##### 마크다운    
-  텍스트를 HTML로 변환하는 도구로 웹저술을 돕는다. 
+  텍스트를 HTML로 변환하는 도구이다.
  
  
 
   
 
-##  R 마크다운 문법
+##  2. R 마크다운 문법
 ##### 제목 텍스트
 제목을 단계적으로 나타내기 위해 # 기호를 사용한다.
 
@@ -140,9 +141,10 @@ str(iris)
 
 순서없는 목록이나 순서있는 목록 만들기를 할 수 있다. 순서없는 목록은 새로운 문단에서 처음을 *이나 -로 시작하고, 순서있는 목록은 새로운 문단에서 숫자나 문자로 시작한다.
 
+ **순서없는 목록**
 
 ```{r eval=F, message=F} 
- - 순서없는 목록  
+  
    * 한식 
      + 탕요리 
      + 면요리 
@@ -150,31 +152,33 @@ str(iris)
    * 중식 
      + 기타
 
- - 순서있는 목록  
-   1. 한식  
-      a.탕   
-      b.면   
-      c.기타 
-   2. 중식 
-   3. 양식
-
 ```
 
- - 순서없는 목록  
-   * 한식 
-     + 탕요리 
-     + 면요리 
-     + 기타 
-   * 중식 
-     + 기타   
-       
- - 순서있는 목록  
+>   * 한식 
+>     + 탕요리 
+>     + 면요리 
+>     + 기타 
+>   * 중식 
+>     + 기타   
+
+ **순서있는 목록**  
+
+```{r eval=F, message=F} 
    1. 한식  
       a.탕   
       b.면   
       c.기타 
    2. 중식 
    3. 양식
+
+```   
+
+>   1. 한식  
+>      a.탕   
+>      b.면   
+>      c.기타 
+>   2. 중식 
+>   3. 양식
 
 ##### 그림 삽입
 
@@ -212,10 +216,9 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) + geom_point(aes(color=drv, size=dis
 
 
 
-![tidyverse logo](https://www.tidyverse.org/images/tidyverse-default.png){ width=50% }
 
 
-##  Git에 올리기 
+##  3. Git에 올리기 
 
 #####  Git 계정 설정
 
@@ -242,7 +245,7 @@ Repositoryr가 만들어지면 화면 상단 오른쪽 끝에 있는 Setting 탭
 
 
 
-##### R Studion 설정
+##### R Studio 설정
 
 **Version Control**로 새로운 프로젝트를 선택한 후 **Git**을 선택한다.
 
