@@ -45,8 +45,6 @@ h5 { /* 혼자서 해보기 */
   font-weight:bold;
   color: DarkRed;
 }
-
-
 </style>
 
 
