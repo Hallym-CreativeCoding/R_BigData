@@ -1,10 +1,18 @@
 창의코딩 R과 빅데이터
 ================
+<<<<<<< HEAD
 # 한림대학교 창의코딩 R과빅데이터
 ## 과목소개
 오픈소스 프로그래밍 언어인 R을 이용하여 데이터에 대한 이해와 데이터를 분석할 수 있는 기초소양을 습득합니다.      
 R에서 사용하는 데이터 구조를 익히고, R 프로그래밍을 통해 데이터를 처리하는 방법과 분석결과를 시각화하는 방법에 대해 학습합니다.
 ## [데이터 탐색](https://github.com/Hallym-CreativeCoding/R_BigData/blob/master/06-%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%83%90%EC%83%89.pdf)
+=======
+
+
+
+## 데이터 탐색
+
+>>>>>>> 3d5a0d69a0fa0c0a842a810d804eb8f378831044
   - 외부데이터 불러오기
   - 데이터 전체적으로
 살펴보기
@@ -18,7 +26,13 @@ R에서 사용하는 데이터 구조를 익히고, R 프로그래밍을 통해 
 ## [데이터 정제](https://github.com/Hallym-CreativeCoding/R_BigData/blob/master/11-%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%A0%95%EC%A0%9C.pdf)
   - 결측값과 이상값 존재 여부 확인
   - 결측값과 이상값의 처리
+<<<<<<< HEAD
 ## [데이터 시각화](https://hallym-creativecoding.github.io/R_BigData/ggplot)
+=======
+
+## [데이터 시각화](https://hallym-creativecoding.github.io/R_BigData/ggplot)
+
+>>>>>>> 3d5a0d69a0fa0c0a842a810d804eb8f378831044
   - ggplot2 패키지를 이용한 그래프 작성
 ## [R마크다운 문서](https://hallym-creativecoding.github.io/R_BigData/markdown)
    - R마크다운 문서를 만들어 Git에 업로드
