@@ -1,6 +1,24 @@
 창의코딩 R과 빅데이터
 ================
 
+<style type="text/css">
+body{ /* Normal  */
+  font-family: 함초롬돋움;
+  font-size: 20px;
+}
+h1 { /* Header 1 */
+  font-size: 30px;
+  font-weight:bold;
+  color: DarkBlue;
+}
+
+h2 { /* Header 2 */
+  font-size: 22px;
+  font-weight:bold;
+  color: DarkBlue;
+}
+</style>
+
 ## 데이터 탐색
 
   - 외부데이터 불러오기
