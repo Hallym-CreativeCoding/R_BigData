@@ -23,6 +23,6 @@
   - 결측값과 이상값 존재 여부 확인
   - 결측값과 이상값의 처리
 
-## 데이터 시각화
+## [데이터 시각화](https://hallym-creativecoding.github.io/R_BigData/ggplot)
 
   - ggplot2 패키지를 이용한 그래프 작성
